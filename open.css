@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin:0px;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(233, 47%, 7%);
+    text-align: center;
+    width:90%;
+    height: 700px;
+}
+.businees-card{
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-flow: row-reverse  nowrap;
+    width: 60%;
+    height: fit-content;
+    margin:2% auto;
+    justify-content: space-between;
+    border-radius: 2%;
+}
+.image{
+    width:45%;
+    height:100%;
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+    background-image: linear-gradient(to left ,violet,darkviolet);
+}
+.content{
+    width:45%;
+    height:100%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    /* grid-template-rows: 30% 10% 30% 10% 20%; */
+    grid-template-rows: 25% 1fr 15% 1fr 35% 1fr ;
+    grid-template-areas:
+    ". . . . . ." 
+    ". one one one one one"
+    ". . . . . ."
+    ". two two two two two"
+    ". . . . . ." 
+    ". z1 . z2 . z3";
+    text-align: center;
+}
+img{
+    width:100%;
+    opacity: 0.6;
+    flood-opacity: 0.5;
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+.line-one{
+    grid-area: one;
+    color: white;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+.line-two{
+    grid-area: two;
+    color: white;
+    font-weight: 400;
+    font-size: 10px;
+    opacity:0.5;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 2%;
+}
+.z1{
+    grid-area: z1;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+}
+.z2{
+    grid-area: z2;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+}
+.z3{
+    grid-area: z3;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+}
+span{
+    color: hsl(277, 64%, 61%);
+    font-size: 17px;
+}
+
+label{
+    opacity: 0.5;
+    font-size: 10px;
+}
+@media (max-width:375px){
+    .businees-card{
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    flex-flow: column  nowrap;
+    width: 60%;
+    height: 80%;
+    margin:2% auto;
+    justify-content: space-between;
+    border-radius: 2%;
+}
+.image{
+    width:100%;
+    height:45%;
+    border-top-right-radius: 2%;
+    border-bottom-right-radius: 2%;
+}
+img{
+    width:100%;
+    opacity: 0.6;
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+}
+.content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+}
